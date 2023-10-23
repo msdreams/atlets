@@ -1,0 +1,16 @@
+.people {
+  background-color: #faebd7;
+  flex-direction: row;
+  display: flex;
+}
+
+.person {
+  flex-direction: column;
+  display: flex;
+}
+
+.person__rank {
+  tab-size: 56px;
+}
+
+/*# sourceMappingURL=atlets.af20ad6e.css.map */

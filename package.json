@@ -1,0 +1,11 @@
+{
+  "name": "atlets",
+  "source": "src/atlets.html",
+  "scripts": {
+    "start": "parcel --open",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}

@@ -1,0 +1,14 @@
+.people {
+  display: flex;
+  flex-direction: row;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+}
+.person__rank {
+  tab-size: 56px;
+}
+
+/*# sourceMappingURL=main.css.map */
