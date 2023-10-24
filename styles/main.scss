@@ -1,46 +1,73 @@
+$photo-width: 200px;
+$item-padding:10px;
+$item-width: $photo-width + $item-padding * 2;
+$gap: 20px;
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .people {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(4,220px);
-  column-gap: 10px;
-  row-gap: 20px;
-  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: $gap;
+  row-gap: 0px;
+  width: 4 *($item-width + $gap);
 
-  position: relative;
 }
 
 @media (max-width: 750px) {
   .people {
-    grid-template-columns: repeat(2,220px);
+    width: 2 *($item-width + $gap);
   }
 }
+
 .person {
   font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
+  padding: $item-padding;
   padding-bottom: 16px;
   display: flex;
   flex-direction: column;
   transition: transform, 1s;
 
-
   &:hover {
-    position: relative;
-    z-index: 1;
+    z-index: 10;
     background-color: #EEEEEE;
     border-radius: 10px;
     transform: scale(1.2);
   }
+
   &:hover &__image {
     border-radius: 60px;
   }
+
   &:hover &__extra {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    height: 0%;
+    text-align: center;
+    overflow-y: visible;
+  }
+
+  &__extra {
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20.7px;
+    color: black;
   }
 
   &__photo {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: $photo-width;
+    height: $photo-width;
     margin-bottom: 8px;
   }
 
@@ -55,7 +82,7 @@
 
   }
 
-  &__rank{
+  &__rank {
     position: absolute;
     display: block;
     z-index: 2;
@@ -68,7 +95,6 @@
     height: 32px;
     border-radius: 50%;
     background: white;
-    position: relative;
     text-align: center;
     line-height: 32px;
     font-size: 16px;
@@ -76,6 +102,7 @@
   }
 
   &__details {
+    position: relative;
     text-align: center;
   }
 
@@ -86,12 +113,4 @@
     color: #2F4F4F;
   }
 
-  &__extra {
-    display: none;
-    margin-top: 9px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 20.7px;
-    color: black;
-  }
 }
