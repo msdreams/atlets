@@ -9,14 +9,14 @@ body {
   flex-direction: row;
   justify-content: left;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   row-gap: 0px;
-  width: 960px;
+  width: 920px;
 }
 
 @media (max-width: 750px) {
   .people {
-    width: 480px;
+    width: 460px;
   }
 }
 .person {
