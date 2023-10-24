@@ -1,16 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .people {
   margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(4, 220px);
-  column-gap: 10px;
-  row-gap: 20px;
-  justify-content: center;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 20px;
+  row-gap: 0px;
+  width: 960px;
 }
 
 @media (max-width: 750px) {
   .people {
-    grid-template-columns: repeat(2, 220px);
+    width: 480px;
   }
 }
 .person {
@@ -22,8 +28,7 @@
   transition: transform, 1s;
 }
 .person:hover {
-  position: relative;
-  z-index: 1;
+  z-index: 10;
   background-color: #EEEEEE;
   border-radius: 10px;
   transform: scale(1.2);
@@ -32,7 +37,21 @@
   border-radius: 60px;
 }
 .person:hover .person__extra {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+  height: 0%;
+  text-align: center;
+  overflow-y: visible;
+}
+.person__extra {
+  opacity: 0;
+  visibility: hidden;
+  margin-top: 9px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20.7px;
+  color: black;
 }
 .person__photo {
   position: relative;
@@ -60,13 +79,13 @@
   height: 32px;
   border-radius: 50%;
   background: white;
-  position: relative;
   text-align: center;
   line-height: 32px;
   font-size: 16px;
   color: #8B0000;
 }
 .person__details {
+  position: relative;
   text-align: center;
 }
 .person__name {
@@ -74,14 +93,6 @@
   font-size: 20px;
   line-height: 23px;
   color: #2F4F4F;
-}
-.person__extra {
-  display: none;
-  margin-top: 9px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 20.7px;
-  color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
