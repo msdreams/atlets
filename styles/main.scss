@@ -35,6 +35,7 @@ body {
   transition: transform, 1s;
 
   &:hover {
+    position: relative;
     z-index: 10;
     background-color: #EEEEEE;
     border-radius: 10px;
@@ -46,8 +47,9 @@ body {
   }
 
   &:hover &__extra {
-    opacity: 1;
-    visibility: visible;
+    // opacity: 1;
+    // visibility: visible;
+    display: block;
     width: 100%;
     height: 0%;
     text-align: center;
@@ -55,8 +57,9 @@ body {
   }
 
   &__extra {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
+    // opacity: 0;
+    // visibility: hidden;
     margin-top: 9px;
     font-weight: 400;
     font-size: 18px;
