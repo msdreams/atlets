@@ -5,30 +5,29 @@ body {
 
 .people {
   margin-top: 50px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
   gap: 10px;
-  row-gap: 0px;
-  width: 920px;
 }
 
 @media (max-width: 750px) {
   .people {
-    width: 460px;
+    grid-template-columns: repeat(2, 220px);
   }
 }
 .person {
+  position: relative;
   font-family: Arial, Helvetica, sans-serif;
-  padding: 10px;
-  padding-bottom: 16px;
   display: flex;
   flex-direction: column;
-  transition: transform, 1s;
 }
-.person:hover {
-  position: relative;
+.person__wraper {
+  transition: transform, 1s;
+  padding: 10px;
+  padding-bottom: 16px;
+}
+.person__wraper:hover {
+  position: absolute;
   z-index: 10;
   background-color: #EEEEEE;
   border-radius: 10px;
